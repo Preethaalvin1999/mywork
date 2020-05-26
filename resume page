@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        HTML DOC
+    </title>
+</head>
+<body bgcolor="rainbow">
+{% block content %}
+<div id="main">
+    <div class="h-tag" align="center">
+        <h2>RESUME</h2>
+    </div>
+    <div class="resume">
+        <table cellspacing="3" align="left" cellpadding="10" border="1">
+            <tr>
+                <td align="right">Firstname :</td>
+                <td><input type="text" placeholder="{{ Firstname }}" id="t0" class="tb"/></td>
+            </tr>
+            <tr>
+                <td align="right">Lastname :</td>
+                <td><input type="text" placeholder="{{ Lastname }}" id="t1" class="tb"/> </td>
+             </tr>
+             <tr>
+                <td align="right">Emailaddress :</td>
+                <td><input type="text" placeholder="{{ Emailaddress }}" id="t2" class="tb"/> </td>
+            </tr>
+              <tr>
+                <td align="right">Contactnumber: </td>
+                <td><input type="text" placeholder="{{ Contactnumber }}" id="t3" class="tb"/> </td>
+            </tr>
+              <tr>
+                <td align="right">Streetaddress :</td>
+                <td><input type="text" placeholder="{{ Streetaddress }}" id="t4" class="tb"/> </td>
+            </tr>
+              <tr>
+                <td align="right">City :</td>
+                <td><input type="text" placeholder="{{ City }}" id="t5" class="tb"/> </td>
+            </tr>
+              <tr>
+                <td align="right">State :</td>
+                <td><input type="text" placeholder="{{ State }}" id="t6" class="tb"/> </td>
+            </tr>
+             <tr>
+                <td align="right">Country :</td>
+                <td><input type="text" placeholder="{{ Country }}" id="t7" class="tb"/> </td>
+            </tr>
+             <tr>
+                <td align="right">Pincode :</td>
+                <td><input type="text" placeholder="{{ Pincode }}" id="t8" class="tb"/> </td>
+            </tr>
+             <tr>
+                <td align="right">Education :</td>
+                <td><input type="text" placeholder="{{ Education }}" id="t9" class="tb"/> </td>
+            </tr>
+             <tr>
+                <td align="right">Skillset :</td>
+                <td><input type="text" placeholder="{{ Skillset }}" id="t10" class="tb"/> </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+from django.shortcuts import render, redirect
+from .forms import StudentForm
+from docx import *
+
+lin = []
+
+
+def index(request):
+    if request.method == 'POST':
+
+        file1 = request.FILES['document']
+        document = Document(file1)
+        lines = []
+        for para in document.paragraphs:
+            temp = ""
+            line = para.text.split()
+            c = 0
+            for x in line:
+                if x == ":":
+                    c = 1
+                if c > 1:
+                    temp += x + " "
+                c += 1
+            lines.append(temp)
+
+        context = {'Firstname': lin[0],
+                   'Lastname': lin[1],
+                   'Emailaddress': lin[2],
+                   'Contactnumber': lin[3],
+                   'Streetaddress': lin[4],
+                   'City': lin[5],
+                   'State': lin[6],
+                   'Country': lin[7],
+                   'Pincode': lin[8],
+                   'Education': lin[9],
+                   'Skillset': lin[10],
+                   }
+        form = StudentForm(context)
+        if form.is_valid():
+            form.save(context)
+            return redirect('/index')
+    return render(request, 'index.html')

@@ -1,0 +1,19 @@
+from django.db import models
+
+
+class Student(models.Model):
+    Firstname = models.charField(max_length=20)
+    Lastname = models.charField(max_length=20)
+    Emailaddress = models.EmailField(max_length=30)
+    Contactnumber = models.charField(max_length=10)
+    Streetaddress = models.charField(max_length=100)
+    City = models.charField(max_length=20)
+    State = models.charField(max_length=15)
+    Country = models.charField(max_length=20)
+    Pincode = models.charField(max_length=10)
+    Education = models.charField(max_length=100)
+    Skillset = models.charField(max_length=100)
+
+
+class Meta:
+    db_table = 'Student'
